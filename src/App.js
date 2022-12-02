@@ -1,21 +1,23 @@
-import "./App.css";
-import SayMyName from "./components/SayMyName";
-import Pessoa from "./components/Pessoa";
-import List from "./components/List";
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+
+import Home from './pages/Home'
+import Psd from './pages/Psd'
+import Photos from './pages/Photos'
+import Vector from './pages/Vector'
 
 function App() {
   return (
-    <div className="App">
-      <SayMyName nome="Everton" />
-
-      <Pessoa
-        nome="Rodrigo"
-        idade="28"
-        profissao="Programador"
-        foto="https://via.placeholder.com/150"
-      />
-      <List />
-    </div>
+                    // Rotas
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/vector" element={<Vector />} />
+          <Route path="/fotos" element={<Photos />} />
+          <Route path="/psd" element={<Psd />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
