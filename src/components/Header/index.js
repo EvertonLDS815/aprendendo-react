@@ -8,6 +8,7 @@ function Header() {
                 <li><Link to="/vector">Vector</Link></li>
                 <li><Link to="/fotos">Fotos</Link></li>
                 <li><Link to="/psd">PSD</Link></li>
+                <li><Link to="/portifolio">Portifolio</Link></li>
             </ul>
         </header>
     )
